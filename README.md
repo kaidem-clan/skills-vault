@@ -34,9 +34,11 @@ skills-vault/
 | `kb-retriever` | Поиск и ответы по локальной базе знаний: индекс-навигация, grep/pdfplumber/pandas, без загрузки файлов целиком. |
 | `web-design-engineer` | Сборка и редизайн полированных веб-артефактов на HTML/CSS/JS/React: страницы, дашборды, прототипы, слайды, дата-виз. |
 | `web-video-presentation` | Статья/скрипт → клик-driven 16:9 веб-презентация «как видео», с опциональным синтезом озвучки (TTS). |
+| `landing-page-design` | Система создания конвертирующих лендингов: структура, копирайтинг, SEO + строгие визуальные правила (типографика, отступы, hero, иконки, motion). |
 
 > Источник скиллов `animate`…`write-swift`: [emilkowalski/skills](https://github.com/emilkowalski/skills) (лицензия MIT).
 > Источник скиллов `beautiful-article`…`web-video-presentation`: [ConardLi/garden-skills](https://github.com/ConardLi/garden-skills) (лицензия MIT).
+> Источник скилла `landing-page-design`: [elayadesign/ai-design-skills](https://github.com/elayadesign/ai-design-skills) (лицензия MIT).
 
 ## Правила
 
