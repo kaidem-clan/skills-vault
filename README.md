@@ -29,8 +29,14 @@ skills-vault/
 | `prototype` | Несколько действительно разных версий UI-куска за визуальным переключателем — листаешь живьём, выбираешь лучшую. |
 | `review-animations` | Ревью анимационного кода по высокому стандарту крафта (философия Ковальски). По умолчанию — флагать, а не хвалить. |
 | `write-swift` | Современный Swift: value types, Swift 6 concurrency, протоколы и дженерики, производительность, Swift Testing. |
+| `beautiful-article` | Превращает материалы (URL / PDF / DOCX / Markdown / скриншоты) в красивую одностраничную HTML-статью — офлайн, с сохранением 100% информации. |
+| `gpt-image-2` | Генерация/редактирование картинок через GPT Image 2: 80+ шаблонов промптов (постеры, UI, продукты, инфографика, комиксы). |
+| `kb-retriever` | Поиск и ответы по локальной базе знаний: индекс-навигация, grep/pdfplumber/pandas, без загрузки файлов целиком. |
+| `web-design-engineer` | Сборка и редизайн полированных веб-артефактов на HTML/CSS/JS/React: страницы, дашборды, прототипы, слайды, дата-виз. |
+| `web-video-presentation` | Статья/скрипт → клик-driven 16:9 веб-презентация «как видео», с опциональным синтезом озвучки (TTS). |
 
 > Источник скиллов `animate`…`write-swift`: [emilkowalski/skills](https://github.com/emilkowalski/skills) (лицензия MIT).
+> Источник скиллов `beautiful-article`…`web-video-presentation`: [ConardLi/garden-skills](https://github.com/ConardLi/garden-skills) (лицензия MIT).
 
 ## Правила
 
