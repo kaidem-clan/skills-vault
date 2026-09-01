@@ -1,0 +1,23 @@
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editors / IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Secrets / env — в репозитории скиллов их быть не должно
+.env
+.env.*
+*.pem
+*.key
+
+# Временные файлы и бэкапы
+tmp/
+*.tmp
+*.bak
+*.log
