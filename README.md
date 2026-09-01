@@ -1,19 +1,30 @@
 # skills-vault
 
-Хранилище скиллов (агентных навыков) организации **kaidem-clan**.
+Хранилище скиллов и slash-команд организации **kaidem-clan**.
 
-Назначение — **только хранение**. Чтобы применить скилл, скопируйте нужную папку
-из этого репозитория в проект (например, в `.opencode/skills/` или `.claude/skills/`).
+Назначение — **только хранение**. Чтобы применить, скопируйте нужную папку/файл
+в проект:
+
+- `skills/<source>/<skill>/` → в `.claude/skills/` или `.opencode/skills/`
+- `commands/<source>/<command>.md` → в `.claude/commands/` или `.opencode/command/`
 
 ## Структура
 
 ```
 skills-vault/
-└── <skill-name>/      # один скилл = одна папка
-    └── SKILL.md       # описание и инструкции скилла
+├── AGENTS.md                    # правила ведения хранилища
+├── README.md                    # этот файл: навигация по всему содержимому
+├── skills/
+│   └── <source>/                # скиллы, сгруппированные по источнику
+│       └── <skill-name>/        # один скилл = одна папка с SKILL.md
+└── commands/
+    └── <source>/                # slash-команды по источникам
+        └── <command>.md         # одна команда = один .md файл
 ```
 
-## Навигация по скиллам
+## Навигация по скиллам (269)
+
+### [emilkowalski/skills](https://github.com/emilkowalski/skills) — 12 (MIT)
 
 | Скилл | Описание |
 | ----- | -------- |
@@ -29,13 +40,29 @@ skills-vault/
 | `prototype` | Несколько действительно разных версий UI-куска за визуальным переключателем — листаешь живьём, выбираешь лучшую. |
 | `review-animations` | Ревью анимационного кода по высокому стандарту крафта (философия Ковальски). По умолчанию — флагать, а не хвалить. |
 | `write-swift` | Современный Swift: value types, Swift 6 concurrency, протоколы и дженерики, производительность, Swift Testing. |
+
+### [ConardLi/garden-skills](https://github.com/ConardLi/garden-skills) — 5 (MIT)
+
+| Скилл | Описание |
+| ----- | -------- |
 | `beautiful-article` | Превращает материалы (URL / PDF / DOCX / Markdown / скриншоты) в красивую одностраничную HTML-статью — офлайн, с сохранением 100% информации. |
 | `gpt-image-2` | Генерация/редактирование картинок через GPT Image 2: 80+ шаблонов промптов (постеры, UI, продукты, инфографика, комиксы). |
 | `kb-retriever` | Поиск и ответы по локальной базе знаний: индекс-навигация, grep/pdfplumber/pandas, без загрузки файлов целиком. |
 | `web-design-engineer` | Сборка и редизайн полированных веб-артефактов на HTML/CSS/JS/React: страницы, дашборды, прототипы, слайды, дата-виз. |
 | `web-video-presentation` | Статья/скрипт → клик-driven 16:9 веб-презентация «как видео», с опциональным синтезом озвучки (TTS). |
+
+### [elayadesign/ai-design-skills](https://github.com/elayadesign/ai-design-skills) — 1 (MIT)
+
+| Скилл | Описание |
+| ----- | -------- |
 | `landing-page-design` | Система создания конвертирующих лендингов: структура, копирайтинг, SEO + строгие визуальные правила (типографика, отступы, hero, иконки, motion). |
 
+### [MengTo/Skills](https://github.com/MengTo/Skills) — 132 (MIT)
+
+#### codex (19)
+
+| Скилл | Описание |
+| ----- | -------- |
 | `article-prompts-to-skills` | Convert an article, tutorial, or prompt pack into focused reusable AgentSkills, one independent capability per skill, with portable instructions, example prompts… |
 | `audit-reference-originality` | Audit a website or digital experience against its supplied source references for originality and plagiarism risk. Use when Codex must compare current or historical site… |
 | `audit-verify-explain-grade-5` | Audit work, verify claims with concrete evidence, and explain the result in simple grade-5 language. Use when the user asks to review, audit, check, verify, explain a… |
@@ -55,6 +82,11 @@ skills-vault/
 | `web-technique-to-skill` | Turn a visual or interaction technique you already built into a reusable web-design skill, by isolating the one mechanism that makes it work while reproducing its… |
 | `write-like-meng-on-x` | Write, rewrite, review, or continuously refine X/Twitter posts in Meng To's current voice using his deduplicated authored-post corpus, personal and product context… |
 | `x-bookmark-quote-posts` | Check a user's latest X/Twitter bookmarks and turn recent saved posts into source-backed quote-post drafts calibrated against the user's latest 100 authored posts. Use… |
+
+#### game-development (20)
+
+| Скилл | Описание |
+| ----- | -------- |
 | `author-game-levels` | Author or revise readable, flat-world Three.js game levels. Use for movement and camera routes, collision and navigation, encounter zones, landmarks, objectives… |
 | `build-game-audio-feedback` | Design or implement responsive audio feedback for a Three.js or web game. Use for action sounds, combat layers, music states, spatial audio, mix priorities, mute… |
 | `build-game-camera-controls` | Implement or tune Three.js game cameras. Use for isometric framing, follow behavior, orbit/zoom limits, occlusion, lock-on, camera shake, touch camera controls, and… |
@@ -75,11 +107,26 @@ skills-vault/
 | `ship-web-games` | Package, deploy, and verify a playable Three.js or web game. Use for release builds, asset delivery, private/public deployment, production smoke tests, browser proof… |
 | `test-playable-web-games` | Test a playable browser game end to end with deterministic fixtures and real browser evidence. Use for gameplay QA, regression testing, controls, accessibility… |
 | `tune-enemy-ai` | Build, debug, balance, or test combat enemy AI for playable action games. Use for aggro, target selection, navigation, spacing, attack choices, telegraphs, retreats… |
+
+#### media (2)
+
+| Скилл | Описание |
+| ----- | -------- |
 | `aura-asset-images` | Use when you need high-quality stock-style images from Aura Assets (aura.build/assets) similar to Unsplash for design mockups and marketing: backgrounds, abstract… |
 | `unsplash-asset-images` | Use when you need to pick high-quality Unsplash images for product/design assets (avatars, headshots, portraits, large website backgrounds, and abstract wallpapers) and… |
+
+#### ui (3)
+
+| Скилл | Описание |
+| ----- | -------- |
 | `audit-ai-design-slop` | Audit websites, apps, screenshots, mockups, and design code for harmful AI-design clichés, generic generated defaults, and established UI defects. Use when the user… |
 | `design-first-ui-prompting` | Use when you need design-first, spec-driven, skimmable prompts for UI generation. Covers prompt structure, constraints, variations, typography/spacing rules, and… |
 | `no-ai-design-slop` | Prevent and remove generic AI-generated design defaults, incoherent visual choices, and established UI defects while creating, revising, or reviewing websites, apps… |
+
+#### web-design (88)
+
+| Скилл | Описание |
+| ----- | -------- |
 | `add-mouse-driven-orbit` | Add restrained mouse-driven orbit and parallax depth to a Three.js hero by damping one pointer target and splitting it across camera translation, look-at, and small… |
 | `add-shader-cursor-trail` | Add the Shaders WebGPU mouse effect used for the Tidal Commons hero: a white twinkling halftone cursor trail driven by ChromaFlow, masked through a DotGrid, finished… |
 | `agency-grid-layout-minimal` | Create a minimal agency design system with a disciplined editorial grid, oversized typography, quiet uppercase utility labels, restrained image blocks, and subtle… |
@@ -168,15 +215,276 @@ skills-vault/
 | `webgl-3d-object` | Create a real 3D WebGL object with geometric mesh depth, physically based material, directional and ambient lighting, perspective camera, subtle rotation, and floating… |
 | `webgl-landing-steering` | Use when creating or refining WebGL-heavy landing pages and you need to steer toward a specific visual outcome (premium, technical, playful, cinematic) while balancing… |
 | `webgl-laser` | Create a fixed full-screen WebGL laser background effect with a thin white-hot vertical core, restrained brand-colored halo, and soft smoky fog around the beam. Use only… |
-> Источник скиллов `animate`…`write-swift`: [emilkowalski/skills](https://github.com/emilkowalski/skills) (лицензия MIT).
-> Источник скиллов `beautiful-article`…`web-video-presentation`: [ConardLi/garden-skills](https://github.com/ConardLi/garden-skills) (лицензия MIT).
-> Источник скилла `landing-page-design`: [elayadesign/ai-design-skills](https://github.com/elayadesign/ai-design-skills) (лицензия MIT).
-> Источник скиллов `article-prompts-to-skills`…`webgl-laser` (категории codex / game-development / media / ui / web-design): [MengTo/Skills](https://github.com/MengTo/Skills) (лицензия MIT).
+
+### [jakubkrehel/skills](https://github.com/jakubkrehel/skills) — 11 (MIT)
+
+| Скилл | Описание |
+| ----- | -------- |
+| `better-accessibility` | Helps your project comply with accessibility standards and best practices. --- # Accessibility Most accessibility is free if you use the platform. Native elements ship… |
+| `better-colors` | Helps you build a color system and answer anything about color in your project. You can generate palettes, use semantic tokens, convert between formats, check contrast… |
+| `better-interface` | Combines all of the `better-*` skills into a single review across accessibility, layout, writing, typography, color and UI polish. --- # Interface review This skill runs… |
+| `better-layout` | Helps with grouping, alignment, reading order, progressive disclosure and other details that make a good layout. --- # Layout Position, spacing and alignment carry… |
+| `better-typography` | Focuses on type scale, spacing, sizing, variable fonts, OpenType features, wrapping, truncation and other details that make typography feel great across your product.… |
+| `better-ui` | Polishes and improves the UI in your project. Covers concentric border radius, optical alignment, surface depth, contextual icons, hit areas and more. --- # UI polish… |
+| `better-writing` | Focuses on improving product copy in your project. --- # Interface writing Clear and brief beats clever; consistent beats varied. The best error message is the… |
+| `break` | Renders a component you choose in every state and scenario on a temporary page and stress tests it. disable-model-invocation: true --- # Break This skill takes one… |
+| `explain-interface` | Helps you figure out how something was built on the web. disable-model-invocation: true --- # Interface explanation This skill answers how something was built.… |
+| `interface-review` | Reviews your work across multiple categories like UI, typography, layout, color, writing and accessibility and gives you a detailed analysis of the findings. --- #… |
+| `variant` | Builds multiple variants of a component you're working on and helps you iterate and pick one. disable-model-invocation: true --- # Variants This skill takes one… |
+
+### [codeswithroh/tastemaker](https://github.com/codeswithroh/tastemaker) — 1 (MIT)
+
+| Скилл | Описание |
+| ----- | -------- |
+| `tastemaker` | Generate genuinely beautiful, on-brand UI instead of generic "AI slop" — use whenever the user asks to build, design, style, or improve a UI, landing page, dashboard… |
+
+### [Owl-Listener/designer-skills](https://github.com/Owl-Listener/designer-skills) — 107 (MIT)
+
+#### design-ops (9)
+
+| Скилл | Описание |
+| ----- | -------- |
+| `design-critique` | Facilitate a structured team critique — framing, feedback rules, and actionable outcomes. Use when running a session with people in the room. For a solo expert review… |
+| `design-debt-audit` | Inventory and prioritise accumulated design inconsistencies across a product. Use when drift has built up over time. For token coverage specifically use… |
+| `design-impact-reporting` | Communicate design's contribution to business and user outcomes in stakeholder language. Use when reporting results upward. For choosing the metrics in the first place… |
+| `design-qa-checklist` | Build a QA checklist for verifying that a build matches the design. Use at implementation review. For the spec engineers build from, use `handoff-spec`. --- # Design QA… |
+| `design-review-process` | Establish review gates — criteria, checkpoints, and approval flow. Use when work ships without consistent review. For running one individual session, use… |
+| `design-sprint-plan` | Plan and facilitate a design sprint from challenge framing through prototype testing. Use when compressing discovery into days. For ongoing team cadence, use… |
+| `handoff-spec` | Write the implementation handoff — measurements, behaviours, assets, states, and edge cases. Use when engineering picks up the work. For verifying the result afterwards… |
+| `team-workflow` | Design the team's operating rhythm — task management, collaboration rituals, and tooling. Use when the day-to-day cadence needs structure. For a time-boxed sprint, use… |
+| `version-control-strategy` | Define version control for design files, components, and libraries — branching, naming, and release. Use when file history is chaotic. For design system contribution… |
+
+#### design-research (12)
+
+| Скилл | Описание |
+| ----- | -------- |
+| `affinity-diagram` | Cluster many qualitative data points into themes and insight statements. Use when synthesising across multiple sessions or sources. For a single transcript use… |
+| `card-sort-analysis` | Analyse open or closed card sort results into a proposed grouping and label set. Use after running a sort study. For turning that evidence into a full structure, use… |
+| `diary-study-plan` | Design a diary study — prompts, cadence, duration, participant criteria, and analysis frame. Use when behaviour unfolds over days or weeks. For a single-session study… |
+| `empathy-map` | Build a Says, Thinks, Does, Feels map for one user or segment. Use when sharing user understanding quickly. For a composite archetype with goals and behaviours use… |
+| `interview-script` | Write a structured interview guide — warm-up, core exploration, and wrap-up. Use before running interviews. For analysing what comes back, use `summarize-interview`. ---… |
+| `jobs-to-be-done` | Map functional, emotional, and social jobs with outcome expectations. Use when reframing decisions around motivation rather than features. For who the user is, use… |
+| `journey-map` | Map one persona's end-to-end experience with stages, touchpoints, emotions, and pain points. Use when improving an existing experience. For the multi-channel ecosystem… |
+| `research-repository` | Build a repository that makes findings findable, reusable, and cumulative across teams. Use when the same research keeps getting redone. For synthesising one study, use… |
+| `summarize-interview` | Turn one interview transcript into themes, supporting quotes, and action items. Use immediately after a session. For synthesising many sessions at once, use… |
+| `survey-design` | Design unbiased survey instruments — question wording, scales, and sampling — to measure attitudes at scale. Use when you need quantitative breadth. For behavioural… |
+| `usability-test-plan` | Design a usability study — research questions, methodology, participant criteria, metrics, and facilitation guide. Use when planning the study as a whole. For writing… |
+| `user-persona` | Build research-grounded personas with goals, frustrations, and behavioural patterns. Use when decisions need a consistent user reference. For one session's emotional… |
+
+#### design-systems (11)
+
+| Скилл | Описание |
+| ----- | -------- |
+| `accessibility-audit` | Audit an existing interface against WCAG, producing findings with severity ratings and remediation steps. Use when you have a design or build to assess now. Not for… |
+| `component-spec` | Specify one component — props, states, variants, accessibility, and usage rules. Use when defining a library component. For the reusable doc scaffold use… |
+| `design-system-governance` | Define how the system evolves — contribution model, versioning, deprecation, and change management. Use when multiple teams contribute. For driving uptake use… |
+| `design-token` | Define and organise tokens for colour, spacing, type, and elevation with naming and usage rules. Use when establishing the token layer. For auditing existing usage use… |
+| `documentation-template` | Generate a reusable documentation scaffold for components, patterns, or guidelines. Use when standardising how the system is documented. For the content of one… |
+| `icon-system` | Specify an icon system — grid, sizing, stroke weight, naming, categories, and implementation. Use when standardising iconography. For broader illustration, use… |
+| `localization-design` | Design for multiple languages, writing directions, and cultural contexts — text expansion, RTL mirroring, and locale formats. Use when shipping beyond one locale. For… |
+| `motion-system` | Define motion tokens — durations, easing vocabulary, and reduced-motion handling — for consistency product-wide. Use when standardising motion across a system. For… |
+| `naming-convention` | Establish naming rules for components, tokens, and layers with patterns and worked examples. Use when names are inconsistent or being set. For what the tokens actually… |
+| `pattern-library` | Structure a pattern entry — problem context, solution, usage examples, and related patterns. Use when documenting a recurring solution rather than a component. For a… |
+| `theming-system` | Design theming architecture — brand variants, dark mode, and high-contrast — mapped through token layers. Use when one system must serve multiple themes. For a single… |
+
+#### designer-toolkit (7)
+
+| Скилл | Описание |
+| ----- | -------- |
+| `case-study` | Craft a portfolio case study with narrative arc, process evidence, and outcomes. Use when telling a project's story to an external audience. For an internal stakeholder… |
+| `design-negotiation` | Advocate for design quality, scope, and timeline with partners and leadership using evidence and shared goals. Use in the conversation itself. For the commercial… |
+| `design-rationale` | Write rationale connecting decisions to user needs, business goals, and principles. Use when a decision needs defending in writing. For a live conversation, use… |
+| `design-system-adoption` | Create adoption strategy and enablement materials to drive design system usage. Use when the system exists but teams ignore it. For contribution and versioning rules… |
+| `design-token-audit` | Audit token usage across a product for coverage, drift, and hard-coded values. Use when tokens exist and you suspect they are being bypassed. For defining tokens in the… |
+| `presentation-deck` | Structure a design presentation for a specific audience and decision. Use when presenting internally. For a portfolio narrative use `case-study`; for the written… |
+| `ux-writing` | Write interface copy — microcopy, error messages, empty states, and CTAs. Use when the words are the deliverable. For content structure and ownership, use… |
+
+#### interaction-design (22)
+
+| Скилл | Описание |
+| ----- | -------- |
+| `animation-principles` | Apply animation principles — easing, staging, follow-through — to one specific UI motion. Use when tuning how an animation feels. For product-wide duration and easing… |
+| `conversational-ux` | Design voice and conversational interfaces — dialog flows, error recovery, and persona. Use when the interface speaks and listens rather than being tapped. For graphical… |
+| `doherty-threshold` | Apply the Doherty Threshold — keep system response under 400ms to preserve user flow. Use when diagnosing perceived slowness or setting a performance budget. For what to… |
+| `error-handling-ux` | Design error prevention, detection, and recovery across a product — message content, placement, and escape routes. Use when errors span multiple flows. For validation… |
+| `feedback-patterns` | Design confirmations, status updates, and notifications that tell users an action registered. Use when the system must acknowledge success or change. For waiting states… |
+| `fitts-law` | Apply Fitts's Law — target acquisition time depends on size and distance. Use when sizing and positioning controls, especially for touch. For how many controls to show… |
+| `form-design` | Design a form end to end — field order, grouping, validation, and completion. Use when the artifact is a form. For product-wide error strategy use `error-handling-ux`… |
+| `gesture-patterns` | Design gesture interactions for touch and pointer — swipe, drag, long-press, and their discoverability. Use when input is gestural. For OS-standard gestures on iOS and… |
+| `hicks-law` | Apply Hick's Law — decision time grows with the number of simultaneous choices. Use when a screen offers too many options at once. For how many items survive in memory… |
+| `interfaces-that-feel` | Apply an emotional resonance lens to a UI that is technically correct but flat, prescribing changes at the copy, motion, and interaction layer. Use when a design tests… |
+| `jakobs-law` | Apply Jakob's Law — users expect your product to work like the others they already use. Use when deciding whether to innovate on a familiar pattern. For OS-mandated… |
+| `loading-states` | Design waiting experiences — spinners, skeletons, optimistic updates, and progressive reveal. Use when content takes time to arrive. For the latency budget itself use… |
+| `micro-interaction-spec` | Specify one micro-interaction completely — trigger, rules, feedback, loops, and modes. Use when handing a single interaction to engineering. For motion craft alone use… |
+| `millers-law` | Apply Miller's Law — chunk information into groups of about four to fit working memory. Use when grouping fields, menu items, or steps. For reducing the number of… |
+| `navigation-patterns` | Select and design a navigation pattern — tabs, drawer, hierarchy, or hub — matched to product structure and user tasks. Use when choosing how users move between… |
+| `onboarding-design` | Design the first-run experience — activation path, progressive disclosure, and time to first value. Use for a user's very first session. For the mechanics of the signup… |
+| `peak-end-rule` | Apply the Peak-End Rule — a flow is remembered by its most intense moment and its last. Use when designing completion, celebration, or cancellation moments. For… |
+| `search-ux` | Design search — query input, zero results, refinement, and result presentation. Use when users retrieve rather than browse. For browse structure, use… |
+| `serial-position-effect` | Apply the Serial Position Effect — first and last items in a sequence are recalled best. Use when ordering menus, lists, and steps. For emphasising one item regardless… |
+| `state-machine` | Model component behaviour as explicit states, events, and transitions. Use when a component has many interacting states that must be exhaustive. For the feel and… |
+| `teslers-law` | Apply Tesler's Law — every process has irreducible complexity that someone must absorb. Use when deciding whether the product or the user carries it. For reducing… |
+| `zeigarnik-effect` | Apply the Zeigarnik Effect — incomplete tasks stay mentally active. Use when designing progress indicators, saved drafts, and return hooks. For the emotional shape of… |
+
+#### prototyping-testing (8)
+
+| Скилл | Описание |
+| ----- | -------- |
+| `a-b-test-design` | Design an A/B experiment — hypothesis, variants, primary metric, and sample size. Use when a change can be measured quantitatively at scale. For observing behaviour… |
+| `accessibility-test-plan` | Plan accessibility testing — assistive technologies, participant criteria, WCAG coverage, and session protocol. Use when scheduling testing with real AT users. Not for… |
+| `click-test-plan` | Design first-click and click tests for findability and navigation. Use when testing whether people can locate something. For full task-based observation, use… |
+| `heuristic-evaluation` | Run an expert review against Nielsen's heuristics and domain criteria, with severity ratings. Use when you need findings without recruiting participants. For a… |
+| `prototype-strategy` | Choose prototype fidelity and method to match the design question and the decision at stake. Use before building a prototype. For what to test once it exists, use… |
+| `test-scenario` | Write realistic usability task scenarios with success criteria and facilitation notes. Use when you have a study and need the tasks. For the surrounding study design… |
+| `user-flow-diagram` | Diagram screen-level paths, decision points, and branch logic. Use when specifying how a feature is traversed. For the emotional end-to-end arc, use `journey-map`… |
+| `wireframe-spec` | Specify wireframe layout — content priority, component placement, and annotation. Use when defining structure before visual design. For grid mechanics, use `layout-grid`… |
+
+#### ui-design (19)
+
+| Скилл | Описание |
+| ----- | -------- |
+| `aesthetic-usability` | Apply the Aesthetic-Usability Effect — polished, consistent interfaces are perceived as more usable and forgive minor friction. Use when justifying visual polish or… |
+| `color-system` | Build a product colour system — tonal scales, semantic roles, and contrast compliance. Use when defining or rebuilding colour from scratch. For dark-mode adaptation use… |
+| `dark-mode-design` | Adapt an existing palette to dark mode — surface elevation, contrast rebalancing, and desaturation rules. Use when you already have a light palette to translate. For… |
+| `data-visualization` | Select chart types and design data encodings — marks, axes, labels, and accessible chart styling. Use when presenting data graphically. Owns chart selection and encoding… |
+| `illustration-style` | Define an illustration style guide — visual language, colour usage, and application rules. Use when commissioning or standardising illustration. For icons, use… |
+| `law-of-closure` | Apply the Law of Closure — the eye completes implied shapes from partial forms. Use when reducing visual weight by dropping borders or letting negative space suggest… |
+| `law-of-common-region` | Apply the Law of Common Region — a shared container, background, or border groups elements regardless of spacing. Use when grouping must survive a tight layout. For… |
+| `law-of-continuity` | Apply the Law of Continuity — the eye follows alignment and unbroken paths. Use when sequencing steps, aligning content, or designing carousels and timelines. For… |
+| `law-of-figure-ground` | Apply the Law of Figure-Ground — establish which layer is foreground and actionable versus background. Use when designing modals, overlays, and depth. For emphasising… |
+| `law-of-proximity` | Apply the Law of Proximity — spatial closeness groups elements more strongly than any other cue. Use when spacing alone must carry grouping. For grouping via containers… |
+| `law-of-similarity` | Apply the Law of Similarity — shared colour, shape, or size signals that elements belong to one category. Use when signalling relationships across distance. For grouping… |
+| `layout-grid` | Define a responsive grid — columns, gutters, margins, and breakpoint behaviour. Use when establishing page structure. For the spacing scale inside components use… |
+| `platform-conventions` | Design to iOS and Android conventions — what each OS mandates, where they diverge, and when to unify. Use when shipping native apps. For breakpoint adaptation use… |
+| `readable-measure` | Set line length and measure for comfortable reading across type sizes and breakpoints. Use when tuning body text. Covers measure only — for the full size and weight… |
+| `responsive-design` | Design layouts and interactions that adapt across screen sizes and input methods. Use when one design must serve many viewports. For the underlying column grid use… |
+| `spacing-system` | Create a spacing scale from a base unit with rules for when each step applies. Use when standardising padding and margins. For page-level columns and gutters, use… |
+| `typography-scale` | Create a modular type scale with size, weight, and line-height relationships. Use when establishing typographic structure. For line length only use `readable-measure`… |
+| `visual-hierarchy` | Establish hierarchy through size, weight, colour, spacing, and position so the eye lands in the intended order. Use when composing new work. For judging an existing… |
+| `von-restorff-effect` | Apply the Von Restorff Effect — the element that differs from its neighbours is the one remembered. Use when a single action must dominate. For overall ordering rather… |
+
+#### ux-strategy (12)
+
+| Скилл | Описание |
+| ----- | -------- |
+| `business-design` | Read financials, map competitive landscapes, and argue design decisions in the language of value. Use when defending design to commercial stakeholders. For the live… |
+| `competitive-analysis` | Compare UX patterns, features, strengths, and gaps across rival products. Use when you need to know what others actually do. For deliberately adopting their conventions… |
+| `content-strategy` | Define what content a product needs, how it is structured, and who owns it. Use when content itself is the problem. For the words in the interface use `ux-writing`… |
+| `design-brief` | Write a project brief — problem space, constraints, audience, and success criteria. Use at kickoff for one specific project. For long-horizon aspiration use… |
+| `design-principles` | Define actionable principles that resolve trade-offs when the team disagrees. Use when the same decisions keep getting relitigated. For a single project's framing, use… |
+| `experience-map` | Map the full ecosystem of touchpoints, channels, and relationships across a service. Use when the experience spans more than one product. For one persona's linear… |
+| `information-architecture` | Design content structure, hierarchy, labelling, and the navigation model. Use when organising what exists. For the UI that exposes it use `navigation-patterns`… |
+| `metrics-definition` | Define UX metrics and KPIs that connect design decisions to measurable outcomes. Use when choosing what to measure. For presenting the results afterwards, use… |
+| `north-star-vision` | Articulate a long-horizon product vision that aligns teams and anchors strategy. Use when direction is contested or absent. For near-term project scope, use… |
+| `opportunity-framework` | Identify, score, and prioritise design opportunities against impact and effort. Use when there are more ideas than capacity. For framing the one you choose, use… |
+| `service-blueprint` | Map service delivery across frontstage actions, backstage processes, and supporting systems. Use when staff and operations are part of the experience. For the… |
+| `stakeholder-alignment` | Build alignment artifacts — responsibility matrices, decision rights, and communication plans. Use when unclear ownership stalls decisions. For persuading in the moment… |
+
+#### visual-critique (7)
+
+| Скилл | Описание |
+| ----- | -------- |
+| `critique-affordance` | Critique a rendered screen's affordances — what looks clickable, state visibility, CTA clarity, and action discoverability. Use when reviewing an existing screen. For… |
+| `critique-brand-consistency` | Critique a rendered screen against mood.md, voice.md, and tokens.md. Use when those brand files exist and you are checking compliance. For defining the visual language… |
+| `critique-color` | Critique a rendered screen's colour — contrast ratios, palette coherence, and semantic meaning. Use when reviewing one screen. For a product-wide WCAG audit use… |
+| `critique-composition` | Critique a rendered screen's composition — balance, whitespace, rhythm, and gestalt grouping. Use when a layout feels off but hierarchy is fine. For emphasis and eye… |
+| `critique-information-density` | Critique a rendered screen's density — cognitive load, content prioritisation, scanning patterns, and progressive disclosure. Use when a screen feels overwhelming. For… |
+| `critique-typography` | Critique a rendered screen's typography — scale usage, readability, consistency, and token compliance. Use when reviewing type on a screen. For defining the scale… |
+| `critique-visual-hierarchy` | Critique a rendered screen's hierarchy — entry point, eye flow, weight distribution, and emphasis. Use when attention lands in the wrong place. For establishing… |
+
+## Навигация по командам (32)
+
+Все команды — из [Owl-Listener/designer-skills](https://github.com/Owl-Listener/designer-skills), источник `commands/owl-listener/`. Команды — это готовые воркфлоу, вызывающие скиллы по цепочке; скиллы от команд не зависят.
+
+#### design-ops
+
+| Команда | Описание |
+| ------- | -------- |
+| `/handoff` | Run the full handoff workflow — specs, measurements, assets, states, and a QA checklist — and output a developer-ready package. |
+| `/plan-sprint` | Run a design sprint end to end — challenge framing, schedule, exercises, and prototype test plan. |
+| `/setup-workflow` | Set up a team's operating rhythm end to end — rituals, task flow, tooling, review gates, and version control. |
+
+#### design-research
+
+| Команда | Описание |
+| ------- | -------- |
+| `/discover` | Run a full user research cycle — persona creation, empathy mapping, and journey mapping for a product or feature. |
+| `/interview` | Prepare an interview script or summarize an interview transcript into structured insights. |
+| `/synthesize` | Synthesize research data into affinity diagrams, themes, and actionable insights. |
+| `/usability-test-plan` | Run the full usability study workflow — research questions, participant criteria, tasks, metrics, and facilitation guide. |
+
+#### design-systems
+
+| Команда | Описание |
+| ------- | -------- |
+| `/audit-system` | Run a comprehensive audit of an existing design system for consistency, completeness, and accessibility. |
+| `/create-component` | Scaffold a full component specification end to end — props, states, variants, accessibility, and documentation. |
+| `/tokenize` | Extract tokens from an existing design or stylesheet and organise them — naming, structure, and theme mapping. |
+
+#### designer-toolkit
+
+| Команда | Описание |
+| ------- | -------- |
+| `/build-presentation` | Build a design presentation end to end — audience framing, narrative structure, and supporting rationale. |
+| `/write-case-study` | Build a portfolio case study end to end — project framing, process narrative, outcomes, and visuals. |
+| `/write-rationale` | Write design rationale for a set of decisions, linking each to user needs, business goals, and principles. |
+
+#### interaction-design
+
+| Команда | Описание |
+| ------- | -------- |
+| `/design-form` | Design a form end to end — structure, decision points, chunking, validation, errors, and completion. |
+| `/design-interaction` | Design a complete interaction flow for a feature or component. |
+| `/design-onboarding` | Design a first-run experience end to end — activation path, progressive disclosure, and time to first value. |
+| `/error-flow` | Design an error flow end to end — prevention, detection, messaging, and recovery paths. |
+| `/map-states` | Model a component's states and transitions end to end — states, events, guards, and edge cases. |
+
+#### prototyping-testing
+
+| Команда | Описание |
+| ------- | -------- |
+| `/evaluate` | Run a heuristic evaluation end to end — expert review against heuristics with severity ratings and recommended fixes. |
+| `/experiment` | Design an A/B experiment end to end — hypothesis, variants, primary metric, and sample size. |
+| `/prototype-plan` | Create a prototyping and testing plan for a design initiative. |
+| `/test-plan` | Choose a testing method and build the plan around it — method selection, task scenarios, click tests, and accessibility coverage. |
+
+#### ui-design
+
+| Команда | Описание |
+| ------- | -------- |
+| `/color-palette` | Run the full colour workflow — tonal scales, semantic mapping, contrast checks, dark mode, and chart colours — and output a documented palette. |
+| `/design-screen` | Design a complete screen layout from a description or requirements. |
+| `/platform-audit` | Audit a design for iOS and Android convention compliance — navigation, controls, typography, and platform-specific gaps. |
+| `/responsive-audit` | Audit a design's responsive behaviour across breakpoints — layout, touch targets, and content reflow. |
+| `/type-system` | Build a typography system end to end — scale, weights, line heights, measure, and responsive behaviour. |
+
+#### ux-strategy
+
+| Команда | Описание |
+| ------- | -------- |
+| `/benchmark` | Run a competitive benchmark across a set of products — pattern comparison, gap analysis, and opportunity callouts. |
+| `/frame-problem` | Structure an ambiguous design challenge into a clear problem definition with constraints and criteria. |
+| `/strategize` | Develop a complete UX strategy for a product or feature area. |
+
+#### visual-critique
+
+| Команда | Описание |
+| ------- | -------- |
+| `/critique-screen` | Run all seven visual critiques on a screen and output a prioritised fix list. |
+| `/critique-ux` | Run a focused UX critique on a screen — affordances, information density, and hierarchy — and output a prioritised fix list. |
+
+> Примечание: `test-plan.md` существовал в двух категориях (design-research и prototyping-testing) с разным содержимым. Версия design-research переименована в `usability-test-plan.md`, версия prototyping-testing оставлена как `test-plan.md`.
 
 ## Правила
 
-1. Один скилл — одна папка в корне репозитория, внутри обязателен `SKILL.md`.
-2. При добавлении нового скилла **обязательно** добавьте его в таблицу
-   «Навигация по скиллам» выше (см. [AGENTS.md](AGENTS.md)).
-3. Скиллы должны быть самодостаточными: без ссылок на файлы вне своей папки.
-4. Не храните в этом репозитории секреты, токены и ключи.
+1. Один скилл — одна папка `skills/<source>/<skill-name>/` с `SKILL.md` внутри;
+   все файлы скилла (скрипты, шаблоны, референсы) лежат только внутри его папки.
+2. Команды хранятся в `commands/<source>/<command>.md`.
+3. При добавлении нового скилла или команды **обязательно** добавьте строку
+   в соответствующую секцию навигации выше (см. [AGENTS.md](AGENTS.md)).
+4. Новые скиллы от уже известного источника добавляйте в его секцию;
+   новый источник — новая секция `###` со ссылкой на репозиторий и лицензией.
+5. При переименовании или удалении синхронизируйте таблицу с содержимым.
+6. Не храните в этом репозитории секреты, токены и ключи.
+
+Все импортированные коллекции распространяются под лицензией MIT.
